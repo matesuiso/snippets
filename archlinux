@@ -1,0 +1,10 @@
+issue with update
+https://www.archlinux.org/news/xorg-cleanup-requires-manual-intervention/
+
+/etc/resolv.conf
+nameserver 8.8.8.8
+nameserver 8.8.4.4
+
+raspberry
+in cmdline.txt
+ipv6.disable=1

@@ -15,7 +15,6 @@ cal.add(Calendar.[MINUTE | HOUR | (DATE | DAY_OF_MONTH) | MONTH | YEAR], -90); /
 
 // Move to certain time (Month is 0 based)
 cal.set(Calendar.[MINUTE | HOUR | (DATE | DAY_OF_MONTH) | MONTH | YEAR], 1);
-cal.set(yearInt, monthInt, dayInt);
 cal.set(yearInt, monthInt, dayInt, hourInt, secondInt);
 
 
@@ -43,11 +42,11 @@ public void writeLog(String message, String logName) throws IOException {
 
 import java.util.regex.Pattern;
 public boolean validateFullTime(String fullTime) {
-    return Pattern.compile("([2][0-3]|[0-1][0-9]|[1-9]):([0-5][0-9]|[0-9]):([0-5][0-9]|[0-9])").matcher(fullTime).find();
+    return Pattern.compile("([2][0-3]|[0-1][0-9]|[1-9]):([0-5][0-9]|[0-9]):([0-5][0-9]|[0-9])").matcher(fullTime).matches();
 }
 
 public boolean validateSimpleTime(String simpleTime) {
-    return Pattern.compile("([0-9]|[0-1][0-9]|[2][0-3]):([0-5][0-9]|[0-9])").matcher(simpleTime).find();
+    return Pattern.compile("([0-9]|[0-1][0-9]|[2][0-3]):([0-5][0-9]|[0-9])").matcher(simpleTime).matches();
 }
 
 
